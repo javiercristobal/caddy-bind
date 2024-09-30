@@ -5,7 +5,7 @@
 ;
 $TTL    86400
 @       IN      SOA     domain-registrar.publicvm.com. admin.domain-registrar.publicvm.com (
-                              1         ; Serial
+                              2         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
@@ -16,4 +16,6 @@ domain-registrar.publicvm.com.     IN      NS      ns1.domain-registrar.publicvm
 ns1.domain-registrar.publicvm.com. IN      A       54.177.232.250
 domain-registrar.publicvm.com.     IN      A       54.177.232.250
 www.domain-registrar.publicvm.com. IN      A       54.177.232.250
-
+cp.domain-registrar.publicvm.com.	IN	A	54.177.232.250
+whois.domain-registrar.publicvm.com.	IN	A	54.177.232.250
+rdap.domain-registrar.publicvm.com.	IN	A	54.177.232.250
