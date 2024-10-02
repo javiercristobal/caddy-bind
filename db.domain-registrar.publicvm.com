@@ -4,7 +4,7 @@
 ; Instead, copy it, edit named.conf, and use that copy.
 ;
 $TTL    86400
-@       IN      SOA     domain-registrar.publicvm.com. admin.domain-registrar.publicvm.com (
+@       IN      SOA     ns1.domain-registrar.publicvm.com. admin.domain-registrar.publicvm.com (
                               2         ; Serial
                          604800         ; Refresh
                           86400         ; Retry

@@ -2,6 +2,13 @@ acl internal-network {
         172.31.0.0/20;
 };
 
+acl "trusted" {
+	54.215.83.143;
+	59.9.123.61;
+	54.177.232.250;
+	172.31.0.141;
+};
+
 options {
 	directory "/var/cache/bind";
 
@@ -16,8 +23,9 @@ options {
 
 	forwarders {
 		63.141.249.202; // Doamin Registrar ns IP
-                54.177.232.250; // Elastic IP
-//                172.31.10.205; // Private IP		
+                54.215.83.143; // ns1 IP
+                59.9.123.61; // ns2 IP
+		172.31.0.141; // Private IP		
 	 };
 
 	//========================================================================
@@ -25,6 +33,10 @@ options {
 	// you will need to update your keys.  See https://www.isc.org/bind-keys
 	//========================================================================
 	dnssec-validation auto;
+	recursion yes;                 # enables recursive queries
+        allow-recursion { trusted; };  # allows recursive queries from "trusted" clients
+        listen-on { 54.215.83.143; };   # ns1 private IP address - listen on private network only
+        allow-transfer { none; };      # disable zone transfers by default
 	allow-query { any; };
-	listen-on-v6 { any; };
+	listen-on-v6 { none; };
 };

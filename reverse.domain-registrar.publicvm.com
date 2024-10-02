@@ -8,8 +8,8 @@ $TTL    604800
                          604800 )       ; Negative Cache TTL
 ; Name server record
 domain-registrar.publicvm.com.       IN      NS      ns1.domain-registrar.publicvm.com.
-; A record for name server
-ns1.domain-registrar.publicvm.com.      IN      A       54.177.232.250
+domain-registrar.publicvm.com.       IN      NS      ns2.domain-registrar.publicvm.com.
+
 ; PTR record for name server
 1	IN      PTR     ns1.domain-registrar.publicvm.com.
 2       IN      PTR     ns2.domain-registrar.publicvm.com.
