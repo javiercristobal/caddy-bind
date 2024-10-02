@@ -12,8 +12,9 @@ $TTL    86400
                           86400 )       ; Negative Cache TTL
 ;
 domain-registrar.publicvm.com.     IN      NS      ns1.domain-registrar.publicvm.com.
-
-ns1.domain-registrar.publicvm.com. IN      A       54.177.232.250
+domain-registrar.publicvm.com.     IN      NS      ns2.domain-registrar.publicvm.com.
+ns1.domain-registrar.publicvm.com. IN      A       54.215.83.143
+ns2.domain-registrar.publicvm.com. IN      A       59.9.123.61
 domain-registrar.publicvm.com.     IN      A       54.177.232.250
 www.domain-registrar.publicvm.com. IN      A       54.177.232.250
 cp.domain-registrar.publicvm.com.	IN	A	54.177.232.250
